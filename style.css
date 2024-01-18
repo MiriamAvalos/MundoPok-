@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-size: 1rem;
+  }
+
+  html{
+    cursor: url('image/Pokeball.cur'), auto;
+
+  }
+
+  .section_botones{
+    width: 100%;
+    min-height: 100px;
+    max-height: auto;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .titulo{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  .btn{
+    width: 70px;
+    height: 30px;
+    background-color:yellow;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .btn:hover{
+    background-color: red;
+  }
+
+  .container{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+
+
+  .figure_container{
+    background-color: red;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 60px;
+    margin-right: 50px;
+    margin-top: 20px;
+    transition: all 0.3s ease-out;
+  }
+
+
+.figure_container:hover{
+    transform: scale(.9);
+    cursor: pointer;
+}
+
+.container_preloader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
