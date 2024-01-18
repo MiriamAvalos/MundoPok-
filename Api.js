@@ -6,14 +6,20 @@ let url_following, url_Back, result, json;
 
 document.addEventListener("DOMContentLoaded", async (e) => {
   try {
+    // Se realiza una solicitud a la API de Pokémon para obtener información sobre los Pokémon.
     result = await fetch("https://pokeapi.co/api/v2/pokemon");
+    
     json = await result.json();
-
+    
+    
+    // Se valida si la solicitud fue exitosa mediante validateFetchError.
     validateFetchError(result);
+    // Se deshabilitan los botones mediante disableButtons.
     disableButtons();
+    // Se obtiene una lista de Pokémon y se asignan las URL siguiente y anterior.
     let pokemons = getListOfPokemon(json);
     assignUrl(json);
-
+    // Se renderizan los Pokémon en el DOM
     renderPokemon(pokemons);
   } catch (err) {
     handleCatchError(err);
@@ -102,10 +108,11 @@ document.addEventListener("DOMContentLoaded", async (e) => {
     pokemons.forEach(async (el) => {
       let resImage = await fetch(el.url);
       let jsonImage = await resImage.json();
-      template.querySelector(".pokemon_image").src = jsonImage.sprites.front_default;
-      template.querySelector(".pokemon_image").alt = el.name;
+      console.log("imagen", jsonImage);
+      template.querySelector(".pokemon_image").src = jsonImage.sprites.other.home.front_default;      ;
+      template.querySelector(".namePokemon").alt = el.name;
       template.querySelector("figcaption").textContent = el.name;
-
+      
       let clone = document.importNode(template, true);
       container.appendChild(clone);
     });
@@ -121,4 +128,14 @@ document.addEventListener("DOMContentLoaded", async (e) => {
       <img src="./image/Preloader.gif" alt="" style="width: 300px; height: 250px;"> 
     </div>`;
   }
+
+
+
+  //buscador
+
+  const btn_Buscar = document.getElementById("btnBuscarPokemon");
+  let input_NombrePokemon = document.getElementById("nombreDelPokemon");
+
+ 
+
 });
