@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Poké</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+<link rel="icon" href="image/pikachu.png" type="image/x-icon">
+
+</head>
+<body>
+    <header class="headerSection"> 
+        <a href="index.html">
+        <img class="returnImage" src="image/return.png" alt="Imagen de retorno al Inicio">
+    </a>
+        <input type="text" id="input_NombrePokemon" placeholder="Buscar Pokémon...">
+   
+        </header>
+
+        <section class="container">
+            
+
+
+        <template id="template_pokemon">
+            <figure class="figure_container">
+            <img class="pokemon_image"  alt="Imagén del pokemón">
+            <p class="namePokemon"></p>
+            <figcaption>
+
+            </figcaption>
+        </figure>
+        </template>
+
+    </section>
+    <div class="div_button_header">
+        <button aria-label="Atrás" id="btn_Back" class="btn btn_Back">Atrás</button>
+        <button aria-label="Siguiente" id="btn_following" class="btn btn_following">Siguiente</button>
+    </div>
+    <footer class="footerIndex">
+        <div><img class="imageFooterPokeBall" src="image/pokeball-pokemon.gif" alt="Logo de Pokémon"></div>
+        <div><img class="imageFooter" src="image/logo-pokemon.png" alt="Logo de Pokémon"></div>
+        
+    </footer>
+    <script src="Api.js"></script>
+
+</body>
+</html>

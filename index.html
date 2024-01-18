@@ -11,40 +11,30 @@
 <link rel="icon" href="image/pikachu.png" type="image/x-icon">
 
 </head>
-<body>
-    <header class="headerSection"> 
-        <img class="returnImage" src="image/return.png" alt="Imagen de retorno al Inicio">
-        <input type="text" id="input_NombrePokemon" placeholder="Nombre del Pokémon">
-   
+<body  class="bodyInicio">
+    <header class="headerInicio"> 
+        <img class="imageLogoPokemonInicio" src="image/logo-pokemon.png" alt="Imagen logo de Pokémon">
+       
         </header>
-
-        <section class="container">
-            
-
-        
-        
-
-        <template id="template_pokemon">
-            <figure class="figure_container">
-            <img class="pokemon_image"  alt="Imagén del pokemón">
-            <p class="namePokemon"></p>
-            <figcaption>
-
-            </figcaption>
-        </figure>
-        </template>
-
-    </section>
-    <div class="div_button_header">
-        <button aria-label="Atrás" id="btn_Back" class="btn btn_Back">Atrás</button>
-        <button aria-label="Siguiente" id="btn_following" class="btn btn_following">Siguiente</button>
+      <div class="divSaludoInicial">
+      <h1 class="h1Saludo"> ¡Hola, detective Pokémon! </h1>
+      <p class="preguntaInicio"> ¿Estás listo para investigar?  </p>
     </div>
-    <footer class="footerIndex">
-        <div><img class="imageFooterPokeBall" src="image/pokeball-pokemon.gif" alt="Logo de Pokémon"></div>
-        <div><img class="imageFooter" src="image/logo-pokemon.png" alt="Logo de Pokémon"></div>
-        
-    </footer>
-    <script src="Api.js"></script>
+
+        <div class="divButtonVerPokemones">
+            <a href="personajes.html">
+            <button class="buttonVerPokemones">VER POKÉMONES</button>
+        </a>
+        </div>
+    <main class="mainInicio">
+        <img class="imagenPikachu" src="image/waving-pikachu.gif" alt="Imagen de Pikachu">
+
+
+    </main>
+    
+    <script src="Api.js" type="module"></script>
 
 </body>
 </html>
+
+
