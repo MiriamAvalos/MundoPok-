@@ -6,41 +6,40 @@
     <title>Mundo Poké</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <link rel="icon" href="image/pokebola.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+<link rel="icon" href="image/pokebola.png" type="image/x-icon">
+
 </head>
-<body class="bodyInicio" onload="play()">
+<body class="bodyInicio" >
     <header class="headerInicio"> 
         <img class="imageLogoPokemonInicio" src="image/logo-pokemon.png" alt="Imagen logo de Pokémon">
-    </header>
-    <div class="divSaludoInicial">
-        <h1 class="h1Saludo"> ¡Hola, detective Pokémon! </h1>
-        <p class="preguntaInicio"> ¿Estás listo para investigar?  </p>
+       
+        </header>
+      <div class="divSaludoInicial">
+      <h1 class="h1Saludo"> ¡Hola, detective Pokémon! </h1>
+      <p class="preguntaInicio"> ¿Estás listo para investigar?  </p>
     </div>
-    <div class="divButtonVerPokemones">
-        <a href="personajes.html">
-            <button id="verPokemones" class="buttonVerPokemones" onclick="playWithDelay()">VER POKÉMONES</button>
+
+        <div class="divButtonVerPokemones">
+            <a href="personajes.html">
+            <button onclick="play()" class="buttonVerPokemones">VER POKÉMONES</button>
         </a>
-    </div>
+        </div>
     <main class="mainInicio">
         <img class="imagenPikachu" src="image/waving-pikachu.gif" alt="Imagen de Pikachu">
+
+
     </main>
+
     <audio id="musica">
         <source src="audio/caught-a-pokemon.mp3" type="audio/mpeg">
-    </audio>
-    <script>
-        function play() {
-            document.getElementById("musica").play();
-        }
-
-        function playWithDelay() {
-    // Agregar un retraso de 300 milisegundos antes de reproducir el audio
-    setTimeout(function () {
-        play();
-    }, 100);
-}
-    </script>
+      </audio>
+   
+      
     <script src="Api.js" type="module"></script>
+
 </body>
 </html>
+
+
